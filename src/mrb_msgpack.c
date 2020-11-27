@@ -781,7 +781,7 @@ mrb_mruby_simplemsgpack_gem_init(mrb_state* mrb)
 #ifndef MRB_WITHOUT_FLOAT
     mrb_define_method(mrb, mrb->float_class, "to_msgpack", mrb_msgpack_pack_float, MRB_ARGS_NONE());
 #endif
-    mrb_define_method(mrb, mrb->fixnum_class, "to_msgpack", mrb_msgpack_pack_fixnum, MRB_ARGS_NONE());
+    mrb_define_method(mrb, mrb->integer_class, "to_msgpack", mrb_msgpack_pack_fixnum, MRB_ARGS_NONE());
     mrb_define_method(mrb, mrb->true_class, "to_msgpack", mrb_msgpack_pack_true, MRB_ARGS_NONE());
     mrb_define_method(mrb, mrb->false_class, "to_msgpack", mrb_msgpack_pack_false, MRB_ARGS_NONE());
     mrb_define_method(mrb, mrb->nil_class, "to_msgpack", mrb_msgpack_pack_nil, MRB_ARGS_NONE());
